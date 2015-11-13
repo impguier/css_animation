@@ -1,0 +1,82 @@
+/* line 3, ../sass/index.scss */
+body {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+/* line 7, ../sass/index.scss */
+.counter {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  top: 10%;
+}
+
+/* line 15, ../sass/index.scss */
+#container {
+  list-style: none;
+  position: relative;
+}
+/* line 18, ../sass/index.scss */
+#container li {
+  position: relative;
+  left: 0;
+  float: left;
+}
+
+/* line 26, ../sass/index.scss */
+#btn-group .button {
+  display: inline-block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  background: #ffffff;
+  margin: 20px;
+  position: relative;
+  line-height: 50px;
+}
+/* line 38, ../sass/index.scss */
+#btn-group .btn-sonar {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 40, ../sass/index.scss */
+#btn-group .btn-sonar::before {
+  opacity: 0;
+  content: "";
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -35px 0 0 -35px;
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 54, ../sass/index.scss */
+#btn-group .active::before {
+  animation: btnAnimation 1s ease-out forwards;
+  -webkit-webit-animation: btnAnimation 1s ease-out forwards;
+  -moz-webit-animation: btnAnimation 1s ease-out forwards;
+  -ms-webit-animation: btnAnimation 1s ease-out forwards;
+  -o-webit-animation: btnAnimation 1s ease-out forwards;
+}
+
+@-webkit-keyframes btnAnimation {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.9, 0.9, 1);
+    transform: scale3d(0.9, 0.9, 1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1.4, 1.4, 1);
+    transform: scale3d(1.4, 1.4, 1);
+  }
+}
